@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     list-style: none;
-    font-style: none
+    font-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
   --roxo-dark: #090025; /* Exemplo de um tom de roxo */
   --roxo-light: #774bff; /* Outro tom, mais claro */
-  --amarelo-cn: #facd22;
+  --amarelo-cn: #fff500;
   --azul-main: #0037ff;
+  --azul-second: #000932;
   --azul-dark: #000027;
   --preto: #000000;
   --preto-purple: #13131f;
@@ -30,6 +34,7 @@ header{
 .main{
     background-color: var(--azul-dark);
     height: 100vh;
+    color: white;
     & .nome-foto{
         display: flex;
         color: white;
@@ -38,9 +43,12 @@ header{
         align-items: center;
         & .nome-text{
             display: flex;
+            gap: 15px;
             flex-direction: column;
             .links{
                 display: flex;
+                gap: 20px;
+            
                 & .icons{
                     & img{
                         width: 30px;
@@ -48,12 +56,20 @@ header{
                 }
             }
             .botoes{
-                & a{
-                    background-image: linear-gradient(to left, #0002a4, #08018e, #0b0179, #0c0165, #0c0051);
-                    color: white;
-                    border: 1px solid white;
-                    padding: 10px;
+                display: flex;
+                gap: 16px;
+                & .cv-ctt{
+                    padding: 10px 15px;
                     border-radius: 2rem;
+                    font-size: 0.93rem;
+                }
+                & #a-cv{
+                    background-image: linear-gradient(to right, #0037ff, #0f27d4, #0f18aa, #080983, #00005e);
+                    color: white;
+                }
+                #a-ctt{
+                    border: 1px solid var(--azul-main);
+                    color: white;
                 }
             }
             & h1{
@@ -71,4 +87,35 @@ header{
             width: 300px;
         }
     }
+}
+.links-sub{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.nome-sub{
+    #luan-flores{
+        color: var(--amarelo-cn);
+    }
+}
+.sobre-mim{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 37px;
+    gap: 20px;
+    & p{
+        width: 35%;
+        text-align: center;
+        color: var(--cor-texto-padrao);
+    }
+    & img{
+        margin-top: 3%;
+    }
+}
+
+.projetos{
+    background-color: var(--azul-second);
+    display: flex;
+    justify-content: center;
 }
