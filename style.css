@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: none
+}
+
+:root {
+  --roxo-dark: #090025; /* Exemplo de um tom de roxo */
+  --roxo-light: #774bff; /* Outro tom, mais claro */
+  --amarelo-cn: #facd22;
+  --azul-main: #0037ff;
+  --azul-dark: #000027;
+  --preto: #000000;
+  --preto-purple: #13131f;
+  --cor-texto-padrao: #828282;
+}
+
+header{
+    background-color: var(--azul-dark);
+    border-bottom: 1px solid var(--azul-main);
+    display: flex;
+    padding-block: 25px;
+    justify-content: center;
+    & h1{
+        color: white;
+    }
+}
+
+.main{
+    background-color: var(--azul-dark);
+    height: 100vh;
+    & .nome-foto{
+        display: flex;
+        color: white;
+        padding-block: 75px;
+        justify-content: space-around;
+        align-items: center;
+        & .nome-text{
+            display: flex;
+            flex-direction: column;
+            .links{
+                display: flex;
+                & .icons{
+                    & img{
+                        width: 30px;
+                    }
+                }
+            }
+            .botoes{
+                & a{
+                    background-image: linear-gradient(to left, #0002a4, #08018e, #0b0179, #0c0165, #0c0051);
+                    color: white;
+                    border: 1px solid white;
+                    padding: 10px;
+                    border-radius: 2rem;
+                }
+            }
+            & h1{
+                font-size: 3rem;
+                width: 60%;
+            }
+            & p{
+                color: var(--cor-texto-padrao);
+                font-size: 1.3rem;
+            }
+        }
+        & #foto{
+            border: 2px solid var(--azul-main);
+            border-radius: 100%;
+            width: 300px;
+        }
+    }
+}
