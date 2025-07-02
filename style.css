@@ -84,7 +84,7 @@ header{
         & #foto{
             border: 2px solid var(--azul-main);
             border-radius: 100%;
-            width: 300px;
+            max-width: 300px;
         }
     }
 }
@@ -152,18 +152,39 @@ header{
     justify-items: center;
     .pj-box{
         width: 75%;
-        height: 34%;
+        height: 35%;
         color: white;
         gap: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        & .box-img{
+            max-width: 532px;
+            max-height: 400px;
+        }
+        & img{
+            height: auto;
+            object-fit: contain; /* mantém a proporção sem cortar */
+            max-width: 100%;
+            max-height: 100%;
+        }
         & p{
             text-align: center;
             color: var(--cor-texto-padrao);
         }
-        & img{
-            width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #foto{
+        width: 210px;
+    }
+    .nome-foto {
+        & .nome-text {
+            & h1 {
+                font-size: 100rem;
+                width: 60%;
+            }
         }
     }
 }
