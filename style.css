@@ -130,14 +130,28 @@ header{
     top: -8vw;
     background-color: var(--azul-second);
     font-size: 2.3rem;
+    & h1{
+        position: relative;
+        padding-left: 18px;
+    }
+    & h1::before{
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: 0;
+        width: 12px;
+        height: 70%;
+        background-color: var(--amarelo-cn);
+    }
 }
 .pj-wrap{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, each taking equal space */
+    gap: 20px; /* Adjust gap between cards as needed */
+    align-content: center;
+    justify-items: center;
     .pj-box{
-        width: 40%;
+        width: 75%;
         height: 34%;
         color: white;
         gap: 10px;
