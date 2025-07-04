@@ -123,7 +123,16 @@ header{
     display: flex;
     background-color: var(--azul-second);
     justify-content: center;
-
+}
+.acess-btn{
+    padding: 10px 15px;
+    border-radius: 2rem;
+    font-size: 0.93rem;
+    text-align: center;
+    width: 60vw;
+    color: white;
+    background-image: linear-gradient(to right, #0037ff, #0f27d4, #0f18aa, #080983, #00005e);
+    border: 1px solid #000932;
 }
 .pj-title{
     position: absolute;
@@ -184,6 +193,7 @@ header{
     .pj-wrap {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 30px;
+        gap: 12vw;
     }
     .sobre-mim{
         & p{
