@@ -33,11 +33,11 @@ header{
 
 .main{
     background-color: var(--azul-dark);
-    height: 100vh;
     color: white;
     & .nome-foto{
         display: flex;
         color: white;
+        gap: 20px;
         padding-block: 75px;
         justify-content: space-around;
         align-items: center;
@@ -73,12 +73,12 @@ header{
                 }
             }
             & h1{
-                font-size: 3rem;
-                width: 60%;
+                font-size: clamp(2rem, 5.5vw, 3rem);
+                width: max-content;
             }
             & p{
                 color: var(--cor-texto-padrao);
-                font-size: 1.3rem;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
             }
         }
         & #foto{
@@ -109,7 +109,7 @@ header{
         color: var(--amarelo-cn);
     }
     & p{
-        width: 35%;
+        width: 50%;
         text-align: center;
         color: var(--cor-texto-padrao);
     }
@@ -159,8 +159,8 @@ header{
         flex-direction: column;
         align-items: center;
         & .box-img{
-            max-width: 532px;
-            max-height: 400px;
+            width: 80%;
+            font-size: clamp(1rem, 2.5vw, 2rem);
         }
         & img{
             height: auto;
@@ -175,16 +175,106 @@ header{
     }
 }
 
+@media screen and (max-width: 1024px){
+    .project{
+        & .pj-title{
+            top: -9vw;
+            font-size: clamp(1.3rem, 3.5vw, 2rem);
+        }
+    }
+    .pj-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 30px;
+    }
+    .sobre-mim{
+        & p{
+            width: 75%;
+        }
+    }
+    .main{
+
+        .nome-foto{
+            
+            & #foto{
+                max-width: 300px;
+                min-width: 200px;
+                width: 30%;
+            }
+        }
+        .nome-text{
+            
+            & p{
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}
+
 @media screen and (max-width: 768px) {
+    .botoes{
+        flex-direction: column;
+        & .cv-ctt{
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+    }
+    }
     #foto{
         width: 210px;
     }
-    .nome-foto {
-        & .nome-text {
-            & h1 {
-                font-size: 100rem;
-                width: 60%;
+    .sobre-mim {
+        margin: 0;
+    & img{
+        margin-top: 0;
+    }
+    & p {
+        width: 75%;
+        font-size: clamp(1rem, 1.5vw, 1.3rem);
+            
+    }
+}
+    .main {
+        & .nome-foto {
+            flex-direction: column-reverse;
+            & .nome-text {
+                align-items: center;
+                & .nome-sub{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            & .links-sub{
+                align-items: center;
+                gap: 25px;
             }
+            }
+        }
+        }
+}
+@media screen and (max-width: 425px) {
+    .main{
+        .nome-text{
+            & p{
+                width: 70%;
+            }
+            & .botoes{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        .nome-foto{
+            padding-block: 35px;
+        }
+    }
+    .pj-wrap{
+        margin-top: 50px;
+    }
+    .botoes{
+        & .cv-ctt{
+        width: 75vw;
         }
     }
 }
