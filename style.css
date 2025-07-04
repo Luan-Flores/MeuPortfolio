@@ -128,7 +128,6 @@ header{
 .pj-title{
     position: absolute;
     top: -8vw;
-    background-color: var(--azul-second);
     font-size: 2.3rem;
     & h1{
         position: relative;
