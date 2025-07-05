@@ -48,20 +48,28 @@ header{
             .links{
                 display: flex;
                 gap: 20px;
-            
+                
                 & .icons{
+                    transition: transform 0.3s ease; /* suavidade na entrada/saída */
                     & img{
                         width: 30px;
                     }
+                }
+                & .icons:hover{
+                    transform: scale(1.05);
                 }
             }
             .botoes{
                 display: flex;
                 gap: 16px;
                 & .cv-ctt{
+                    transition: transform 0.3s ease; /* suavidade na entrada/saída */
                     padding: 10px 15px;
                     border-radius: 2rem;
                     font-size: 0.93rem;
+                }
+                & .cv-ctt:hover{
+                    transform: scale(1.05); /* cresce 5% */
                 }
                 & #a-cv{
                     background-image: linear-gradient(to right, #0037ff, #0f27d4, #0f18aa, #080983, #00005e);
@@ -132,10 +140,14 @@ header{
     width: 30%;
     border-radius: 2rem;
     font-size: 0.93rem;
+    transition: transform 0.3s ease; /* suavidade na entrada/saída */
     text-align: center;
     color: white;
     background-image: linear-gradient(to right, #0037ff, #0f27d4, #0f18aa, #080983, #00005e);
     border: 1px solid #000932;
+}
+.acess-btn:hover{
+    transform: scale(1.05); /* cresce 5% */
 }
 .pj-title{
     position: absolute;
@@ -257,6 +269,28 @@ header{
     color: #cccccc; /* Slightly lighter text for details */
     margin: 0;
 }
+/* Parte da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra */
+}
+
+/* Fundo da barra (trilho) */
+::-webkit-scrollbar-track {
+  background: var(--azul-dark);
+}
+
+/* Cor do "thumb" (parte que se move) */
+::-webkit-scrollbar-thumb {
+    background: var(--azul-main);
+    border-radius: 6px;
+}
+
+/* Hover no thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--azul-second);
+    border: 1px solid var(--azul-main);
+}
+
 
 @media screen and (max-width: 1024px){
     .project{
