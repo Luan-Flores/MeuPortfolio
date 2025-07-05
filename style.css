@@ -126,10 +126,10 @@ header{
 }
 .acess-btn{
     padding: 10px 15px;
+    width: 30%;
     border-radius: 2rem;
     font-size: 0.93rem;
     text-align: center;
-    width: 60vw;
     color: white;
     background-image: linear-gradient(to right, #0037ff, #0f27d4, #0f18aa, #080983, #00005e);
     border: 1px solid #000932;
@@ -155,12 +155,12 @@ header{
 .pj-wrap{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns, each taking equal space */
-    gap: 20px; /* Adjust gap between cards as needed */
+    gap: 50px; /* Adjust gap between cards as needed */
     align-content: center;
     justify-items: center;
     .pj-box{
         width: 75%;
-        height: 35%;
+        /* height: 35%; */
         color: white;
         gap: 10px;
         display: flex;
@@ -179,6 +179,7 @@ header{
         & p{
             text-align: center;
             color: var(--cor-texto-padrao);
+            height: 120px;
         }
     }
 }
@@ -228,6 +229,9 @@ header{
         display: flex;
         justify-content: center;
     }
+}
+    .acess-btn{
+        width: 60vw;
     }
     #foto{
         width: 210px;
@@ -280,7 +284,11 @@ header{
     }
     .pj-wrap{
         margin-top: 50px;
+        & .pj-box{
+        width: auto;
     }
+    }
+    
     .botoes{
         & .cv-ctt{
         width: 75vw;
