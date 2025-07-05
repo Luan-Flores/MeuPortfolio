@@ -121,6 +121,9 @@ header{
 .project{
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
     background-color: var(--azul-second);
     justify-content: center;
 }
@@ -183,6 +186,77 @@ header{
         }
     }
 }
+.contacts-section {
+    padding: 40px;
+    margin-block: 10vw 15vw;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contacts-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-item {
+    background-color: #3e3e60; /* Darker background for each item */
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.icon-circle {
+    background-color: var(--azul-main); /* Purple color for the circle */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-circle i {
+    color: #ffffff;
+    font-size: 2.5em;
+}
+
+.contact-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+.contact-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item p {
+    font-size: 1em;
+    color: #cccccc; /* Slightly lighter text for details */
+    margin: 0;
+}
 
 @media screen and (max-width: 1024px){
     .project{
@@ -222,6 +296,36 @@ header{
 }
 
 @media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    .contacts-section{
+        padding: 0;
+        
+    }
+
+    .contacts-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-circle i {
+        font-size: 2em;
+    }
+
+    .contact-item h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-item p {
+        font-size: 0.9em;
+    }
     .botoes{
         flex-direction: column;
         & .cv-ctt{
