@@ -36,6 +36,9 @@ header{
     color: white;
     & .nome-foto{
         display: flex;
+        opacity: 0;
+        transform: translateY(200px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
         color: white;
         gap: 20px;
         padding-block: 75px;
@@ -95,6 +98,11 @@ header{
             max-width: 300px;
         }
     }
+    .nome-foto.show{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
 }
 .links-sub{
     display: flex;
@@ -111,6 +119,9 @@ header{
     align-items: center;
     flex-direction: column;
     margin-top: 37px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
     gap: 20px;
     & h1{
         font-size: 2rem;
@@ -125,15 +136,24 @@ header{
         margin-top: 3%;
     }
 }
+.sobre-mim.show{
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .project{
     position: relative;
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     padding-bottom: 70px;
     background-color: var(--azul-second);
     justify-content: center;
+}
+.project.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 .acess-btn{
     padding: 10px 15px;
@@ -175,6 +195,9 @@ header{
     justify-items: center;
     .pj-box{
         width: 75%;
+        position: fixed;         /* Tira do fluxo e mantém fixo */
+        top: 0;
+        right: -100%;            /* Começa fora da tela */
         /* height: 35%; */
         color: white;
         gap: 10px;
@@ -196,6 +219,9 @@ header{
             color: var(--cor-texto-padrao);
             height: 120px;
         }
+    }
+    .pj-box.show{
+        right: 0;
     }
 }
 .contacts-section {
@@ -319,6 +345,7 @@ header{
                 width: 30%;
             }
         }
+        
         .nome-text{
             
             & p{
