@@ -141,8 +141,13 @@ header {
 		color: var(--cor-texto-padrao);
 	}
 	& img {
+		line-height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
 		background-color: rebeccapurple;
-		display: block;
+		height: auto; /* ou altura fixa se quiser */
+		vertical-align: bottom; /* evita espaço abaixo */
 	}
 	& .text-sobre {
 		display: flex;
