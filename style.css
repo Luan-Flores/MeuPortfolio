@@ -431,7 +431,7 @@ header {
 		margin: 0;
 		padding: 0;
 		height: max-content;
-		gap: 0;
+
 		& img {
 			margin-top: 0;
 		}
