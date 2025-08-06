@@ -147,14 +147,14 @@ header {
 		align-items: center;
 		width: 100%;
 	}
-	& img {
+	/* & img {
 		line-height: 0;
 		margin: 0;
 		padding: 0;
 		border: 0;
-		height: auto; /* ou altura fixa se quiser */
-		vertical-align: bottom; /* evita espaço abaixo */
-	}
+		height: auto;
+		vertical-align: bottom; 
+	} */
 	& .text-sobre {
 		display: flex;
 		/* height: 100%; */
@@ -167,6 +167,9 @@ header {
 .sobre-mim.show {
 	opacity: 1;
 	transform: translateY(0);
+}
+.divisor-svg {
+	background-color: yellow;
 }
 
 .project {
