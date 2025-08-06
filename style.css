@@ -146,6 +146,7 @@ header {
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+		padding-block: 10px 45px;
 	}
 	/* & img {
 		line-height: 0;
@@ -401,7 +402,19 @@ header {
 	.contacts-section {
 		padding: 0;
 	}
-
+	.pj-wrap {
+		& .pj-box {
+			& p {
+				display: flex;
+				text-align: center;
+				color: var(--cor-texto-padrao);
+				height: max-content;
+				width: 90%;
+				min-height: 125px;
+				align-items: center;
+			}
+		}
+	}
 	.contacts-section h2 {
 		font-size: 2em;
 		margin-bottom: 30px;
