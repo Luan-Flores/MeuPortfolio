@@ -169,7 +169,7 @@ header {
 	transform: translateY(0);
 }
 .divisor-svg {
-	background-color: yellow;
+	background-color: var(--azul-dark);
 }
 
 .project {
