@@ -125,11 +125,12 @@ header {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: var(--azul-dark);
+	/* background-color: var(--azul-dark); */
+	background-color: greenyellow;
 	/* background-color: rgb(95, 22, 0); */
 	opacity: 0;
-	/* transform: translateY(200px);*/
-	transition: opacity 1s ease-out;
+	transform: translateY(200px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
 	gap: 35px;
 	& h1 {
 		font-size: 2rem;
@@ -141,7 +142,7 @@ header {
 		color: var(--cor-texto-padrao);
 	}
 	& img {
-		background-color: var(--azul-dark);
+		background-color: rebeccapurple;
 	}
 	& .text-sobre {
 		display: flex;
@@ -153,7 +154,7 @@ header {
 }
 .sobre-mim.show {
 	opacity: 1;
-	/* transform: translateY(0); */
+	transform: translateY(0);
 }
 
 .project {
@@ -211,11 +212,8 @@ header {
 }
 .pj-wrap {
 	display: grid;
-	grid-template-columns: repeat(
-		2,
-		1fr
-	); /* 2 columns, each taking equal space */
-	gap: 50px; /* Adjust gap between cards as needed */
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
 	align-content: center;
 	justify-items: center;
 	.pj-box {
@@ -359,6 +357,7 @@ header {
 		gap: 12vw;
 	}
 	.sobre-mim {
+		margin: 0;
 		& p {
 			width: 75%;
 		}
@@ -426,6 +425,8 @@ header {
 	}
 	.sobre-mim {
 		margin: 0;
+		padding: 0;
+		height: max-content;
 		& img {
 			margin-top: 0;
 		}
